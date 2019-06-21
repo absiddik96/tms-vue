@@ -1,0 +1,63 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+$fa-font-path: "../webfonts";
+
+@import "~@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import "~@fortawesome/fontawesome-free/scss/solid.scss";
+@import "~@fortawesome/fontawesome-free/scss/brands.scss";
+
+$primary-color: #FF7400;
+
+a {
+    text-decoration: none !important;
+}
+
+.active li{
+    background-color: $primary-color;
+    color: white !important;
+    border-left: 3px solid black;
+}
+
+.menu-item li:hover{
+    background-color: $primary-color;
+    color: white !important;
+    border-left: 3px solid black;
+}
+
+.menu-item li{
+    color: $primary-color;
+}
+
+.card-header {
+    background-color: $primary-color;
+    color: white !important;
+}
+
+.card{
+    border: 1px solid $primary-color;
+}
+
+.list-group-item:last-child {
+    border-bottom-right-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+}
+.list-group-item:first-child {
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+}
+
+.list-group-item {
+    border: 1px solid $primary-color;
+}
+
+.active > .list-group-item {
+    border-top: 0px solid $primary-color !important;
+    border-bottom: 0px solid $primary-color !important;
+}
