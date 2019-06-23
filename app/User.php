@@ -36,4 +36,13 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    protected $appends = [
+        'edit_url'
+    ];
+
+    public function getEditUrlAttribute()
+    {
+        return route('admin.users.edit',$this->id);
+    }
 }

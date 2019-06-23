@@ -8,6 +8,9 @@
         <!-- CSRF Token -->
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
+        <!-- App Base URL -->
+        <meta name="app-base-url" content="{{ url('') }}" />
+
         <title>{{ config('app.name', 'Laravel') }}</title>
 
         <!-- Fonts -->
@@ -78,7 +81,7 @@
                 <div class="container">
                     <div class="row justify-content-center">
                         @if (Auth::check())
-                        <div class="col-md-4 pr-md-0 pb-3">
+                        <div class="col-md-3 pr-md-0 pb-3">
                             <ul class="list-group">
                                 <a class="menu-item {{ Request::is('home')?'active':'' }}" href="{{ route('home') }}">
                                     <li class="list-group-item"> <i class="fas fa-tachometer-alt"></i> Dashboard</li>
@@ -90,7 +93,7 @@
                             </ul>
                         </div>
                         @endif
-                        <div class="{{ Auth::check() ? 'col-md-8' : 'col-md-12' }}">
+                        <div class="{{ Auth::check() ? 'col-md-9' : 'col-md-12' }}">
                             @yield('content')
                         </div>
                     </div>
